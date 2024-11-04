@@ -1,0 +1,140 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --color-green: #06A816;
+    --color-orange: #E75D02;
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    --font-habibi: 'Habibi', serif;
+    --font-irish-grover: 'Irish Grover', cursive;
+
+    /* Font sizes */
+    --font-size-h1: 2.5em;
+    --font-size-h2: 1.75em;
+    --font-size-h3-text: 1.25em;
+
+    --font-size-mobile-first: 
+}
+
+/* -------------------- GLOBAL STYLES -------------------- */
+body {
+    font-family: var(--font-habibi);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: var(--font-irish-grover);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-black);
+}
+
+h3 {
+    font-size: var(--font-size-h3-text);
+    color: var(--color-black);
+}
+main p{
+    color: var(--color-black);
+}
+
+/* HEADER */
+header {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav {
+    background-color: var(--color-white);
+    padding: 30px 70px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+header li {
+    padding: 10px;
+    background-color: var(--color-orange);
+    border-radius: 2px;
+}
+
+header li a{
+    color: var(--color-white);
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* FOOTER */
+.footer-column{
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column layout for mobile by default */
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.copyright{
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: var(--color-white);
+    color: var(--color-green);
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Small - min-width: 428px */
+@media (min-width: 428px) {
+    .footer-column {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .row-2 {
+        margin-top: -20px; /* Brings row 2 closer to row 1 */
+    }
+
+    .row-4 {
+        margin-top: -20px; /* Brings row 4 closer to row 3 */
+    }
+}
+
+/* Medium - min-width: 834px */
+@media (min-width: 834px) {
+    /* Styles for medium screens and above */
+}
+
+/* Large - min-width: 1280px */
+@media (min-width: 1280px) {
+    .footer-column {
+        grid-template-columns: repeat(4, 1fr); /* Change to 4 columns */
+    }
+}
+
+/* XL - min-width: 1440px */
+@media (min-width: 1440px) {
+    .footer-column {
+        grid-template-columns: repeat(4, 1fr); /* Change to 4 columns */
+    }
+}
