@@ -169,7 +169,61 @@ header li a{
 
 /* Medium - min-width: 834px */
 @media (min-width: 834px) {
+    .header-inside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
     
+    nav {
+        padding: 30px 20px;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 20px;
+    }
+    
+    header li {
+        padding: 10px 150px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .footer-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;  /* Two rows */
+    }
+
+    /* Position the rows in specific columns */
+    .row-1 {
+        grid-column: 1; /* First column */
+        grid-row: 1;    /* First row */
+    }
+
+    .row-2 {
+        grid-column: 1; /* First column */
+        grid-row: 2;    /* Second row */
+    }
+
+    .row-3 {
+        grid-column: 2; /* Second column */
+        grid-row: 1;    /* First row */
+    }
+
+    .row-4 {
+        grid-column: 2; /* Second column */
+        grid-row: 2;    /* Second row */
+    }
 }
 
 /* Large - min-width: 1280px */
